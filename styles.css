@@ -1,0 +1,847 @@
+/* ==========================================
+   OPTIPROJECTS - CSS ESTILO HORROR
+   Inspirado en Resident Evil / Silent Hill
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0a0a0a;
+    color: #d4d0c8;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Fondo oscuro con textura sutil */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+        radial-gradient(ellipse at 20% 30%, rgba(40, 10, 10, 0.4) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 70%, rgba(20, 25, 15, 0.3) 0%, transparent 50%),
+        #0a0a0a;
+}
+
+/* Capa de oscuridad adicional */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: rgba(5, 5, 5, 0.3);
+    pointer-events: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+/* ==========================================
+   ENCABEZADO
+========================================== */
+
+header {
+    min-height: 75px;
+    padding: 15px 6%;
+    background: rgba(8, 6, 6, 0.92);
+    backdrop-filter: blur(8px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    border-bottom: 1px solid #2a1515;
+}
+
+.logo,
+.footer-logo {
+    font-size: 24px;
+    font-weight: 900;
+    color: #e8e0d8;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+.logo span,
+.footer-logo span {
+    color: #8b1a1a;
+    text-shadow: 0 0 14px rgba(139, 26, 26, 0.7);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    color: #b0a8a0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+    letter-spacing: 0.5px;
+}
+
+nav a:hover {
+    color: #c44;
+}
+
+.carrito {
+    font-size: 21px;
+    white-space: nowrap;
+    color: #c9c0b8;
+}
+
+#contador {
+    display: inline-block;
+    background: #6b1212;
+    color: #e8e0d8;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+    border: 1px solid #8b1a1a;
+}
+
+/* ==========================================
+   PORTADA PRINCIPAL
+========================================== */
+
+.hero {
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        105deg,
+        rgba(8, 5, 5, 0.85) 0%,
+        rgba(12, 8, 8, 0.5) 45%,
+        rgba(10, 10, 8, 0.2) 100%
+    );
+}
+
+.hero-contenido {
+    max-width: 650px;
+    position: relative;
+    z-index: 2;
+}
+
+.mini-titulo {
+    color: #8b1a1a;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 95px);
+    line-height: 0.95;
+    font-weight: 900;
+    letter-spacing: -3px;
+    color: #e8e0d8;
+}
+
+.hero h1 span {
+    display: block;
+    color: #8b1a1a;
+    text-shadow:
+        0 0 12px rgba(139, 26, 26, 0.8),
+        0 0 40px rgba(80, 10, 10, 0.5);
+}
+
+.hero h2 {
+    margin-top: 25px;
+    font-size: clamp(18px, 2.8vw, 28px);
+    color: #7a6e60;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.hero-contenido > p:not(.mini-titulo) {
+    margin-top: 20px;
+    color: #a09890;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 570px;
+}
+
+/* ==========================================
+   BOTONES
+========================================== */
+
+.botones {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.btn,
+button {
+    display: inline-block;
+    padding: 14px 24px;
+
+    background: #5c1010;
+    color: #e8e0d8;
+
+    border: 1px solid #8b1a1a;
+    border-radius: 4px;
+
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover,
+button:hover {
+    background: #8b1a1a;
+    border-color: #a02222;
+    transform: translateY(-2px);
+    box-shadow: 0 0 22px rgba(139, 26, 26, 0.4);
+    color: #fff;
+}
+
+.secundario {
+    background: rgba(15, 12, 12, 0.7);
+    border-color: #4a3030;
+    color: #b0a8a0;
+}
+
+.secundario:hover {
+    background: #3a1515;
+    border-color: #8b1a1a;
+    color: #e8e0d8;
+}
+
+/* ==========================================
+   SECCIONES
+========================================== */
+
+.seccion {
+    padding: 85px 7%;
+    text-align: center;
+    background: rgba(8, 7, 7, 0.75);
+}
+
+.oscura {
+    background: rgba(6, 5, 5, 0.85);
+}
+
+.titulo-pequeno {
+    color: #8b1a1a;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.titulo {
+    margin: 15px 0 45px;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    color: #d8d0c8;
+}
+
+.titulo::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 3px;
+    margin: 18px auto 0;
+
+    background: linear-gradient(
+        to right,
+        #5c1010,
+        #8b1a1a,
+        #5c1010
+    );
+
+    border-radius: 2px;
+}
+
+/* ==========================================
+   BENEFICIOS
+========================================== */
+
+.beneficios {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.beneficios > div {
+    width: 230px;
+    padding: 28px 20px;
+
+    background: #121010;
+    border: 1px solid #2a1a1a;
+    border-bottom: 3px solid #5c1010;
+    border-radius: 6px;
+
+    transition: 0.3s;
+}
+
+.beneficios > div:hover {
+    transform: translateY(-5px);
+    border-color: #8b1a1a;
+    box-shadow: 0 8px 25px rgba(60, 10, 10, 0.3);
+}
+
+.icono {
+    font-size: 36px;
+    margin-bottom: 15px;
+    filter: grayscale(0.3) brightness(0.9);
+}
+
+.beneficios h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+    color: #d0c8c0;
+}
+
+.beneficios p {
+    color: #7a726a;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* ==========================================
+   PRODUCTOS / PROYECTOS
+========================================== */
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.producto {
+    min-width: 0;
+    overflow: hidden;
+
+    background: #121010;
+    border: 1px solid #2a1a1a;
+    border-radius: 8px;
+
+    text-align: left;
+    transition: 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-6px);
+    border-color: #8b1a1a;
+    box-shadow: 0 10px 28px rgba(80, 15, 15, 0.25);
+}
+
+.producto-img {
+    height: 210px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 80px;
+
+    background: radial-gradient(
+        circle,
+        #1e1515,
+        #0e0c0c 75%
+    );
+
+    border-bottom: 1px solid #2a1a1a;
+}
+
+.ps5 {
+    background: radial-gradient(circle, #1a1218, #0e0c0c 75%);
+}
+
+.xbox {
+    background: radial-gradient(circle, #121a12, #0e0c0c 75%);
+}
+
+.nintendo {
+    background: radial-gradient(circle, #1a1212, #0e0c0c 75%);
+}
+
+.ps4 {
+    background: radial-gradient(circle, #151218, #0e0c0c 75%);
+}
+
+.producto-info {
+    padding: 22px;
+}
+
+.marca {
+    color: #8b1a1a;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.producto h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #d8d0c8;
+}
+
+.producto-info > p:not(.marca) {
+    min-height: 40px;
+    color: #7a726a;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.producto strong {
+    display: block;
+    margin: 18px 0;
+    color: #a03030;
+    font-size: 18px;
+}
+
+.producto button {
+    width: 100%;
+    padding: 12px 8px;
+    font-size: 11px;
+}
+
+/* ==========================================
+   SECCIÓN DESTACADA
+========================================== */
+
+.gta {
+    min-height: 480px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px 7%;
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background: rgba(10, 6, 6, 0.6);
+
+    border-top: 1px solid #3a1515;
+    border-bottom: 1px solid #3a1515;
+}
+
+.gta-contenido {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.gta-contenido > p:first-child {
+    color: #8b1a1a;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.gta h2 {
+    margin: 22px 0;
+    font-size: clamp(40px, 7vw, 75px);
+    line-height: 1;
+    font-weight: 900;
+    text-shadow: 0 4px 20px #000;
+    color: #e0d8d0;
+}
+
+.gta h2 span {
+    display: block;
+    color: #8b1a1a;
+    text-shadow: 0 0 28px rgba(139, 26, 26, 0.6);
+}
+
+.gta h3 {
+    color: #8a7e70;
+    font-size: clamp(18px, 2.8vw, 26px);
+    margin-bottom: 20px;
+}
+
+.gta-contenido > p:not(:first-child) {
+    color: #9a9088;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+/* ==========================================
+   MÁS PROYECTOS
+========================================== */
+
+.juegos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.juego {
+    overflow: hidden;
+    padding-bottom: 22px;
+
+    background: #121010;
+    border: 1px solid #2a1a1a;
+    border-radius: 6px;
+
+    transition: 0.3s;
+}
+
+.juego:hover {
+    transform: translateY(-5px);
+    border-color: #8b1a1a;
+}
+
+.portada {
+    height: 250px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1.15;
+
+    text-shadow: 0 3px 12px #000;
+    color: #d0c8c0;
+}
+
+.gta-portada {
+    background: linear-gradient(
+        155deg,
+        #2a1010,
+        #4a1515,
+        #1a0c0c
+    );
+}
+
+.gta-portada span {
+    font-size: 60px;
+    color: #c9b8b0;
+}
+
+.cod-portada {
+    background: linear-gradient(
+        155deg,
+        #121212,
+        #2a2a2a,
+        #0e0e0e
+    );
+}
+
+.red-portada {
+    background: linear-gradient(
+        155deg,
+        #1a0c08,
+        #3a2010,
+        #120a06
+    );
+}
+
+.fifa-portada {
+    background: linear-gradient(
+        155deg,
+        #0c1018,
+        #1a2030,
+        #0a0c12
+    );
+}
+
+.juego h3 {
+    min-height: 42px;
+    margin: 18px 12px 12px;
+    font-size: 15px;
+    color: #d0c8c0;
+}
+
+.juego strong {
+    display: block;
+    margin-bottom: 16px;
+    color: #a03030;
+    font-size: 17px;
+}
+
+.juego button {
+    margin: 0 12px;
+    padding: 11px 18px;
+}
+
+/* ==========================================
+   CATEGORÍAS / ACCESORIOS
+========================================== */
+
+.accesorios {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.accesorio {
+    padding: 35px 18px;
+
+    background: #121010;
+    border: 1px solid #2a1a1a;
+    border-radius: 6px;
+
+    font-size: 48px;
+    transition: 0.3s;
+    color: #c0b8b0;
+}
+
+.accesorio:hover {
+    transform: translateY(-4px);
+    border-color: #8b1a1a;
+    box-shadow: 0 6px 20px rgba(60, 10, 10, 0.25);
+}
+
+.accesorio h3 {
+    margin: 20px 0 12px;
+    font-size: 16px;
+    color: #d0c8c0;
+}
+
+.accesorio p {
+    color: #8b1a1a;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* ==========================================
+   CONTACTO
+========================================== */
+
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 16px;
+
+    background: #0e0c0c;
+    color: #d0c8c0;
+
+    border: 1px solid #2a1a1a;
+    border-radius: 4px;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #8b1a1a;
+    box-shadow: 0 0 12px rgba(139, 26, 26, 0.2);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #5a5250;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+form button {
+    width: 100%;
+}
+
+/* ==========================================
+   PIE DE PÁGINA
+========================================== */
+
+footer {
+    padding: 45px 20px;
+    text-align: center;
+
+    background: rgba(5, 4, 4, 0.95);
+    border-top: 1px solid #2a1515;
+}
+
+.footer-logo {
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin: 12px;
+    color: #6a625a;
+    font-size: 13px;
+}
+
+.redes {
+    margin: 22px 0;
+    color: #8b1a1a;
+    font-size: 25px;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #4a4240;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1050px) {
+    header {
+        padding: 18px 4%;
+        flex-wrap: wrap;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .productos,
+    .juegos,
+    .accesorios {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+}
+
+/* ==========================================
+   CELULARES
+========================================== */
+
+@media (max-width: 700px) {
+    header {
+        position: relative;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 570px;
+        padding: 55px 22px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+        letter-spacing: -2px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .hero-contenido > p:not(.mini-titulo) {
+        font-size: 15px;
+    }
+
+    .botones {
+        justify-content: center;
+    }
+
+    .btn {
+        padding: 13px 17px;
+        font-size: 11px;
+    }
+
+    .seccion {
+        padding: 65px 20px;
+    }
+
+    .titulo {
+        font-size: 28px;
+        margin-bottom: 35px;
+    }
+
+    .productos,
+    .juegos,
+    .accesorios {
+        grid-template-columns: 1fr;
+    }
+
+    .producto-img {
+        height: 220px;
+    }
+
+    .gta {
+        min-height: 400px;
+        padding: 45px 20px;
+    }
+
+    .gta h2 {
+        font-size: 40px;
+    }
+
+    .gta h3 {
+        font-size: 18px;
+    }
+
+    .portada {
+        height: 260px;
+    }
+
+    .beneficios > div {
+        width: 100%;
+        max-width: 350px;
+    }
+}

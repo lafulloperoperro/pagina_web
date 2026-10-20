@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptiProjects | Optimizaciones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            Opti<span>Projects</span>
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#categorias">Categorías</a>
+            <a href="#destacados">Destacados</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <div class="carrito">
+            📦 <span id="contador">0</span>
+        </div>
+
+    </header>
+
+
+    <!-- ================= INICIO / HERO ================= -->
+
+    <section id="inicio" class="hero">
+
+        <div class="hero-contenido">
+
+            <p class="mini-titulo">
+                OPTIPROJECTS PRESENTA
+            </p>
+
+            <h1>
+                OPTI<span>PROJECTS</span>
+            </h1>
+
+            <h2>
+                OPTIMIZACIONES PARA PCs DE BAJOS RECURSOS
+            </h2>
+
+            <p>
+                Proyectos ligeros, ports y herramientas pensadas
+                para que tus juegos corran mejor en cualquier equipo.
+            </p>
+
+            <div class="botones">
+
+                <a href="#proyectos" class="btn">
+                    VER PROYECTOS
+                </a>
+
+                <a href="#categorias" class="btn secundario">
+                    VER CATEGORÍAS
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BENEFICIOS ================= -->
+
+    <section class="seccion">
+
+        <p class="titulo-pequeno">
+            OPTIPROJECTS
+        </p>
+
+        <h2 class="titulo">
+            ¿Por qué usar nuestras optimizaciones?
+        </h2>
+
+        <div class="beneficios">
+
+            <div>
+                <div class="icono">⚡</div>
+                <h3>Más rendimiento</h3>
+                <p>Versiones ligeras pensadas para PCs modestas.</p>
+            </div>
+
+            <div>
+                <div class="icono">📦</div>
+                <h3>Tamaño reducido</h3>
+                <p>Proyectos optimizados para ocupar menos espacio.</p>
+            </div>
+
+            <div>
+                <div class="icono">🛠️</div>
+                <h3>Fácil de usar</h3>
+                <p>Instalación sencilla y lista para jugar.</p>
+            </div>
+
+            <div>
+                <div class="icono">🎮</div>
+                <h3>Variedad</h3>
+                <p>Juegos, ports, programas y más.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORÍAS ================= -->
+
+    <section id="categorias" class="seccion oscura">
+
+        <p class="titulo-pequeno">
+            CATEGORÍAS
+        </p>
+
+        <h2 class="titulo">
+            Explora por tipo
+        </h2>
+
+        <div class="accesorios">
+
+            <div class="accesorio">
+                🕹️
+                <h3>Juegos</h3>
+                <p>Optimizados</p>
+            </div>
+
+            <div class="accesorio">
+                📦
+                <h3>Ports</h3>
+                <p>Consola → PC</p>
+            </div>
+
+            <div class="accesorio">
+                🛠️
+                <h3>Programas</h3>
+                <p>Utilidades</p>
+            </div>
+
+            <div class="accesorio">
+                🎮
+                <h3>OptiCraft</h3>
+                <p>Especial</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROYECTOS ================= -->
+
+    <section id="proyectos" class="seccion">
+
+        <p class="titulo-pequeno">
+            PROYECTOS
+        </p>
+
+        <h2 class="titulo">
+            Proyectos destacados
+        </h2>
+
+        <div class="productos">
+
+            <div class="producto">
+                <div class="producto-img ps5">
+                    🧱
+                </div>
+                <div class="producto-info">
+                    <p class="marca">JUEGOS</p>
+                    <h3>PixelCraft Lite</h3>
+                    <p>Versión ligera de un juego de bloques.</p>
+                    <strong>Lite</strong>
+                    <button onclick="agregarProyecto('PixelCraft Lite')">
+                        AGREGAR
+                    </button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <div class="producto-img xbox">
+                    🏎️
+                </div>
+                <div class="producto-info">
+                    <p class="marca">JUEGOS</p>
+                    <h3>RaceTrack Mini</h3>
+                    <p>Carreras optimizadas para PCs antiguas.</p>
+                    <strong>Lite</strong>
+                    <button onclick="agregarProyecto('RaceTrack Mini')">
+                        AGREGAR
+                    </button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <div class="producto-img nintendo">
+                    ⚔️
+                </div>
+                <div class="producto-info">
+                    <p class="marca">JUEGOS</p>
+                    <h3>Adventure Quest</h3>
+                    <p>RPG con gráficos reducidos.</p>
+                    <strong>Compact</strong>
+                    <button onclick="agregarProyecto('Adventure Quest')">
+                        AGREGAR
+                    </button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <div class="producto-img ps4">
+                    🔫
+                </div>
+                <div class="producto-info">
+                    <p class="marca">PORTS</p>
+                    <h3>Retro FPS Classic</h3>
+                    <p>Shooter clásico adaptado.</p>
+                    <strong>Port</strong>
+                    <button onclick="agregarProyecto('Retro FPS Classic')">
+                        AGREGAR
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BANNER DESTACADO ================= -->
+
+    <section class="gta">
+
+        <div class="gta-contenido">
+
+            <p>
+                DESTACADO
+            </p>
+
+            <h2>
+                OPTICRAFT
+                <span>DEMO</span>
+            </h2>
+
+            <h3>
+                EXPERIENCIA DE BLOQUES OPTIMIZADA
+            </h3>
+
+            <p>
+                Una versión de demostración pensada para equipos de bajos recursos.
+            </p>
+
+            <button onclick="agregarProyecto('OptiCraft Demo')">
+                AGREGAR A LA LISTA
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MÁS PROYECTOS ================= -->
+
+    <section id="destacados" class="seccion oscura">
+
+        <p class="titulo-pequeno">
+            MÁS PROYECTOS
+        </p>
+
+        <h2 class="titulo">
+            Otras optimizaciones
+        </h2>
+
+        <div class="juegos">
+
+            <div class="juego">
+                <div class="portada gta-portada">
+                    CITY<br>
+                    <span>BLDR</span>
+                </div>
+                <h3>City Builder Light</h3>
+                <strong>Lite</strong>
+                <button onclick="agregarProyecto('City Builder Light')">
+                    AGREGAR
+                </button>
+            </div>
+
+            <div class="juego">
+                <div class="portada cod-portada">
+                    SPACE<br>
+                    EXPLORER
+                </div>
+                <h3>Space Explorer</h3>
+                <strong>Compact</strong>
+                <button onclick="agregarProyecto('Space Explorer')">
+                    AGREGAR
+                </button>
+            </div>
+
+            <div class="juego">
+                <div class="portada red-portada">
+                    FARM<br>
+                    LIFE
+                </div>
+                <h3>Farm Life Simple</h3>
+                <strong>Lite</strong>
+                <button onclick="agregarProyecto('Farm Life Simple')">
+                    AGREGAR
+                </button>
+            </div>
+
+            <div class="juego">
+                <div class="portada fifa-portada">
+                    PUZZLE<br>
+                    BLOCKS
+                </div>
+                <h3>Puzzle Blocks Zero</h3>
+                <strong>Extra</strong>
+                <button onclick="agregarProyecto('Puzzle Blocks Zero')">
+                    AGREGAR
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROGRAMAS / EXTRA ================= -->
+
+    <section class="seccion">
+
+        <p class="titulo-pequeno">
+            PROGRAMAS Y EXTRA
+        </p>
+
+        <h2 class="titulo">
+            Herramientas y packs
+        </h2>
+
+        <div class="accesorios">
+
+            <div class="accesorio">
+                🌐
+                <h3>Browser Pack</h3>
+                <p>Backports</p>
+            </div>
+
+            <div class="accesorio">
+                🖥️
+                <h3>Driver Pack</h3>
+                <p>Lite</p>
+            </div>
+
+            <div class="accesorio">
+                📱
+                <h3>Mobile Lite</h3>
+                <p>Celulares</p>
+            </div>
+
+            <div class="accesorio">
+                ⚙️
+                <h3>Utilidades</h3>
+                <p>Extra</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACTO ================= -->
+
+    <section id="contacto" class="seccion oscura">
+
+        <p class="titulo-pequeno">
+            CONTACTO
+        </p>
+
+        <h2 class="titulo">
+            ¿Tienes alguna duda?
+        </h2>
+
+        <form onsubmit="enviarFormulario(event)">
+
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Nombre"
+                required
+            >
+
+            <input
+                type="email"
+                id="correo"
+                placeholder="Correo electrónico"
+                required
+            >
+
+            <textarea
+                id="mensaje"
+                placeholder="Escribe tu mensaje"
+                required
+            ></textarea>
+
+            <button type="submit">
+                ENVIAR MENSAJE
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            Opti<span>Projects</span>
+        </div>
+
+        <p>
+            Optimizaciones • Ports • Programas
+        </p>
+
+        <div class="redes">
+            f &nbsp; ◎ &nbsp; ▶ &nbsp; ♪
+        </div>
+
+        <p class="copyright">
+            © 2026 OptiProjects — Maqueta visual
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
